@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Registre"
+    android:background="#d8d3c8"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#a14844"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/action_search"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:textAllCaps="true"
+                android:tint="@android:color/white"
+                android:src="@drawable/edit_notepad_icon" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="MOGUDES"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_style"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="1dp"
+                    android:text="Tots" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="0dp"
+                    android:background="@drawable/button_style"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="1dp"
+                    android:text="D'amics" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="0dp"
+                    android:background="@drawable/button_style"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:text="Assistiré" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#AAAAAA" />
+
+            <LinearLayout
+                android:id="@+id/filtrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fcf8f0"
+                android:layout_marginBottom="10dp"
+
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:padding="10dp">
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Filtrar"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="24sp"
+                        android:layout_marginVertical="4dp"
+
+                        android:textColor="#454545"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Madrid, spain"
+                        android:padding="3dp"
+                        android:clickable="false"
+                        android:layout_marginLeft="10dp"
+
+
+                        android:textSize="22sp"
+                        android:layout_marginVertical="4dp"
+
+                        android:textColor="#ababaa"/>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="45dp"
+                    android:clickable="false"
+                    android:layout_height="fill_parent">
+                    <ImageView
+                        android:id="@+id/action_go"
+                        android:layout_width="45dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:padding="8dp"
+                        android:src="@drawable/next"
+                        android:tint="#cccccc" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#AAAAAA" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#AAAAAA" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/assistents_recycler"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:background="#e7e2d7">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:src="@drawable/clock_icon"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+
+            android:padding="2dp"
+            android:src="@drawable/newspaper_folded"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+
+            android:padding="2dp"
+            android:src="@drawable/star_icon"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+
+            android:padding="2dp"
+            android:src="@drawable/calendar_icon"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+
+            android:padding="2dp"
+            android:src="@drawable/search_icon"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:src="@drawable/message_icon"
+            android:layout_gravity="center_vertical"
+            android:tint="#757370" />
+
+
+    </LinearLayout>
+</LinearLayout>

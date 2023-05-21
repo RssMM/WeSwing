@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Registre"
+    android:background="#d8d3c8"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#a14844"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/action_search"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:textAllCaps="true"
+                android:padding="8dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Alba Cas Lemoonhop"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="3dp"
+                android:background="#fcf8f0"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="18dp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="85dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/profile_icon"
+                    android:padding="2dp"
+                    app:civ_border_width="0dp"
+                    android:elevation="1dp"
+                    android:layout_gravity="center"
+                    app:civ_border_color="#FF000000"/>
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Alba Cas Lemoonhop"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#a24845"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <RatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:numStars="5"
+                    android:layout_gravity="center"
+                    android:stepSize="0.1"
+                    android:isIndicator="true" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/inici_button_style"
+                    android:textAllCaps="false"
+                    android:text="Deixar da seguir" />
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/inici_button_style"
+                    android:textAllCaps="false"
+                    android:text="Missatge" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="3dp"
+                android:background="#fcf8f0"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_margin="3dp"
+                        android:maxLines="1"
+                        android:text="Rol:"
+                        android:textColor="#444444"
+                        android:textSize="23dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+
+                        android:paddingRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_margin="3dp"
+                        android:maxLines="1"
+                        android:text="Follower / Leader"
+                        android:textColor="#444444"
+                        android:textSize="23dp" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAAAA"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_margin="3dp"
+                        android:maxLines="1"
+                        android:text="Rol:"
+                        android:textColor="#444444"
+                        android:textSize="23dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+
+                        android:paddingRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_margin="3dp"
+                        android:maxLines="1"
+                        android:text="Follower / Leader"
+                        android:textColor="#444444"
+                        android:textSize="23dp" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAAAA"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_margin="3dp"
+                        android:maxLines="1"
+                        android:text="Rol:"
+                        android:textColor="#444444"
+                        android:textSize="23dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+
+                        android:paddingRight="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_margin="3dp"
+                        android:text="@string/descripcio"
+                        android:textColor="#444444"
+                        android:textSize="23dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="3dp"
+                android:background="#fcf8f0"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_margin="3dp"
+                    android:maxLines="1"
+                    android:text="N'ha après a"
+                    android:textColor="#000"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAAAA"/>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fcf8f0"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:padding="10dp">
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+
+                            android:paddingRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_margin="3dp"
+                            android:maxLines="1"
+                            android:text="Swing Maniacs"
+                            android:textColor="#444444"
+                            android:textSize="23dp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="45dp"
+                        android:layout_height="fill_parent">
+                        <ImageView
+                            android:id="@+id/action_go"
+                            android:layout_width="45dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:padding="8dp"
+                            android:src="@drawable/next" />
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="3dp"
+                android:background="#fcf8f0"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_margin="3dp"
+                    android:maxLines="1"
+                    android:text="Fotografíes"
+                    android:textColor="#444444"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAAAA"/>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fcf8f0"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:padding="10dp">
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="20sp"
+                            android:src="@drawable/logo"
+                            android:textColor="#444444"/>
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#fcf8f0"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:padding="10dp">
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Professors"
+                            android:clickable="false"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="24sp"
+                            android:layout_marginVertical="4dp"
+
+                            android:textColor="#454545"/>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="45dp"
+                        android:clickable="false"
+                        android:layout_height="fill_parent">
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:clickable="false"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:padding="8dp"
+                            android:src="@drawable/next"
+                            app:tint="#cccccc" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAAAA"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#fcf8f0"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:padding="10dp">
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Seguidors"
+                            android:clickable="false"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="24sp"
+                            android:layout_marginVertical="4dp"
+
+                            android:textColor="#454545"/>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="45dp"
+                        android:clickable="false"
+                        android:layout_height="fill_parent">
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:clickable="false"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:padding="8dp"
+                            android:src="@drawable/next"
+                            app:tint="#cccccc" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAAAA"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#fcf8f0"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:padding="10dp">
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Seguint"
+                            android:clickable="false"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="24sp"
+                            android:layout_marginVertical="4dp"
+
+                            android:textColor="#454545"/>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="45dp"
+                        android:clickable="false"
+                        android:layout_height="fill_parent">
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:clickable="false"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:padding="8dp"
+                            android:src="@drawable/next"
+                            app:tint="#cccccc" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAAAA"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#fcf8f0"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:padding="10dp">
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mogudes de Alba"
+                            android:clickable="false"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="24sp"
+                            android:layout_marginVertical="4dp"
+
+                            android:textColor="#454545"/>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="45dp"
+                        android:clickable="false"
+                        android:layout_height="fill_parent">
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:clickable="false"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:padding="8dp"
+                            android:src="@drawable/next"
+                            app:tint="#cccccc" />
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#AAAAAA"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:background="#e7e2d7">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:src="@drawable/clock_icon"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+
+            android:padding="2dp"
+            android:src="@drawable/newspaper_folded"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+
+            android:padding="2dp"
+            android:src="@drawable/star_icon"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+
+            android:padding="2dp"
+            android:src="@drawable/calendar_icon"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+
+            android:padding="2dp"
+            android:src="@drawable/search_icon"
+            android:layout_gravity="center_vertical"
+
+            android:tint="#757370" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:src="@drawable/message_icon"
+            android:layout_gravity="center_vertical"
+            android:tint="#757370" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
